@@ -1,0 +1,29 @@
+{
+  "name": "jobplaner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "",
+    "nodemon": "node ./node_modules/nodemon/bin/nodemon.js server.js",
+    "test": "node ./node_modules/mocha/bin/mocha --timeout=10000 --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18",
+    "express": "4.16",
+    "express-validator": "5.3",
+    "http-status-codes": "1.3",
+    "mysql2": "1.6",
+    "pm2": "3.3",
+    "sequelize": "4.42"
+  },
+  "devDependencies": {
+    "chai": "4.2",
+    "chai-http": "4.2",
+    "dotenv": "6.2",
+    "mocha": "6.0",
+    "nodemon": "1.18"
+  }
+}
