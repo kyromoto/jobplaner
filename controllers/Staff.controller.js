@@ -1,30 +1,28 @@
-const httpStatus = require('http-status-codes');
-const {Job, Staff} = require('./../models');
-
 exports.getAllStaffs = (req, res) => {
-    Staff.findAll()
-        .then(staffs => res.status(httpStatus.OK).json(staffs))
-        .catch(err => res.status(httpStatus.INTERNAL_SERVER_ERROR).err())
-        .catch(err => console.error(err));
+  const Models = req.app.get('models')
+  Models.Staff.findAll({})
+    .then(staffs => res.json(staffs))
+    .catch(err => { throw new Error(err) })
 }
 
 exports.createStaff = (req, res) => {
-    Staff.create(req.body)
-        .then(staff => res.json(staff))
-        .catch(err => console.error(err));
+  const Models = req.app.get('models')
+  Models.Staff.create(req.body)
+    .then(staff => res.json(staff))
+    .catch(err => { throw new Error(err) })
 }
 
 exports.getStaffById = (req, res) => {
-    Staff.findById(req.params.staffId)
-        .then(staff => res.json(staff))
-        .catch(err => console.error(err))
-        .catch(err => res.status(500).json(err));
+  const Models = req.app.get('models')
+  Models.Staff.findById(req.params.staffId)
+    .then(staff => res.json(staff))
+    .catch(err => { throw new Error(err) })
 }
 
 exports.updateStaffById = (req, res) => {
-
+  throw new Error('NOT IMPLEMENTED');
 }
 
 exports.deleteStaffById = (req, res) => {
-
+  throw new Error('NOT IMPLEMENTED');
 }

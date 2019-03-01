@@ -6,9 +6,10 @@
   "scripts": {
     "start": "",
     "nodemon": "node ./node_modules/nodemon/bin/nodemon.js server.js",
-    "test": "node ./node_modules/mocha/bin/mocha --timeout=10000 --exit"
+    "standard": "standard --fix",
+    "test": "mocha --timeout=10000 --exit"
   },
-  "author": "",
+  "author": "info@kyromoto.de",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.18",
@@ -24,6 +25,7 @@
     "chai-http": "4.2",
     "dotenv": "6.2",
     "mocha": "6.0",
-    "nodemon": "1.18"
+    "nodemon": "1.18",
+    "standard": "12.0"
   }
 }
